@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend part for cleaning transport managment system from hackaton. Developed by IT_Cow",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AlexeyKozlovsky/cleaning-managment-system-frontend.git"
+  },
+  "author": "IT_Cow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexeyKozlovsky/cleaning-managment-system-frontend/issues"
+  },
+  "homepage": "https://github.com/AlexeyKozlovsky/cleaning-managment-system-frontend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
