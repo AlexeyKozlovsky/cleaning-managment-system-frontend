@@ -1,5 +1,7 @@
-var mymap = L.map('map').setView([52.5920624, 39.5245544], 13);
-
+var mymap = L.map('map', {zoomControl: false}).setView([52.5920624, 39.5245544], 13);
+mymap.on("load",function() { setTimeout(() => {
+    self.map.invalidateSize();
+}, 1); });
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -26,3 +28,18 @@ for(let i = 0; i < points.length; i++)
         L.polyline([points[i], points[i+1]]).addTo(mymap);
     }
 }
+
+// var latlngArray;
+// var control = L.Routing.control({
+//     waypoints: latlngArray,
+//     show: false,
+//     waypointMode: 'snap',
+//     createMarker: function() {}
+// }).addTo(map);
+
+L.Routing.control({
+    waypoints: [
+        L.latLng(57.74, 11.94),
+        L.latLng(57.6792, 11.949)
+    ]
+}).addTo(mymap);

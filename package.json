@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/AlexeyKozlovsky/cleaning-managment-system-frontend#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.6.1",
+    "express": "^4.17.1",
+    "leaflet": "^1.7.1",
+    "leaflet-routing-machine": "^3.2.12"
   }
 }
