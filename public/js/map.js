@@ -11,23 +11,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiYWxhbm5vbmUiLCJhIjoiY2t2M3R4MHprNGJpZTJuczdtN2cxMGRxYSJ9.KGT874RF78OPPqwKS7YZWQ'
 }).addTo(mymap);
 
-let points = [
-    [52.609432, 39.5811687],
-    [52.6095023, 39.5841104],
-];
-
-// iterate through the points to dynamically create the elements
-for(let i = 0; i < points.length; i++)
-{
-    // every point creates a circle (node)
-    L.circle(points[i], {radius: 20}).addTo(mymap)
-
-    // every pair of adjacent points creates an edge,
-    // other logic can be implemented
-    if(i + 1 < points.length){
-        L.polyline([points[i], points[i+1]]).addTo(mymap);
-    }
-}
 
 // var latlngArray;
 // var control = L.Routing.control({
@@ -36,10 +19,3 @@ for(let i = 0; i < points.length; i++)
 //     waypointMode: 'snap',
 //     createMarker: function() {}
 // }).addTo(map);
-
-L.Routing.control({
-    waypoints: [
-        L.latLng(57.74, 11.94),
-        L.latLng(57.6792, 11.949)
-    ]
-}).addTo(mymap);

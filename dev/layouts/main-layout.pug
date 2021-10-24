@@ -1,0 +1,24 @@
+block variables
+
+doctype html
+html(lang="en")
+    head
+        link(rel='stylesheet', type='text/css', href='css/styles.css')
+        link(rel='stylesheet', type='text/css', href='css/bootstrap.css')
+        link(rel='stylesheet', type='text/css', href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css')
+        link(rel='stylesheet', type='text/css', href='css/owl.carousel.css')
+        link(rel='stylesheet', type='text/css', href='css/osm.css')
+        link(rel='stylesheet', type='text/css', href='css/leaflet.css')
+        link(rel='stylesheet', type='text/css', href='css/MarkerCluster.css')
+        link(rel='stylesheet', type='text/css', href='https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css')
+        block css_styles
+        title=pageTitle
+    body
+        block content
+
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js")
+        script(src="js/sidebar.js")
+        script(src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js", integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==", crossorigin="")
+        script(src="js/leaflet.markercluster.js")
+        script(src="js/map.js")
+        block scripts
